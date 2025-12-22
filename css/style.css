@@ -1,0 +1,171 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* CONTAINER (3D CARD) */
+.container {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* HEADINGS */
+h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* INPUTS */
+input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(118, 75, 162, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(118, 75, 162, 0.55);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 6px 15px rgba(118, 75, 162, 0.4);
+}
+
+/* TOGGLE TEXT */
+.toggle {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.toggle span {
+    color: #667eea;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.toggle span:hover {
+    color: #764ba2;
+}
+
+/* MESSAGE */
+#msg {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #e74c3c;
+}
+
+/* TASK LIST */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    background: #f4f6fb;
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(5px);
+    background: #e9ecf9;
+}
+
+/* COMPLETED TASK */
+#completedTasks li {
+    text-decoration: line-through;
+    background: #d1f2eb;
+    color: #555;
+}
+
+/* LOGOUT BUTTON */
+button:last-of-type {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #ff6b6b, #ee5253);
+    box-shadow: 0 8px 18px rgba(238, 82, 83, 0.4);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .container {
+        padding: 25px 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>My Tasks</h2>
+
+    <input type="text" id="taskInput" placeholder="New task">
+    <button onclick="addTask()">Add Task</button>
+
+    <h3>Pending</h3>
+    <ul id="pendingTasks"></ul>
+
+    <h3>Completed</h3>
+    <ul id="completedTasks"></ul>
+
+    <button onclick="logout()">Logout</button>
+</div>
+
+<script src="js/dashboard.js"></script>
+</body>
+</html>
